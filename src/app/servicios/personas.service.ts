@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Persona } from '../models/persona.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable(//{
+  //providedIn: 'root'  //comento esto para poder crear distintas intacias del servicio
+//}
+)
 export class PersonasService {
 
   personas: Persona[];
@@ -19,5 +20,9 @@ export class PersonasService {
 
   getAll() {
     return this.personas;
+  }
+
+  create(nuevaPersona: Persona){
+    this.personas.push(nuevaPersona);
   }
 }
