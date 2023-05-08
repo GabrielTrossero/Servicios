@@ -1,5 +1,8 @@
 <ul>
-    <li *ngFor="let persona of arrPersonas">
-        {{persona.nombre}} {{persona.apellido}}
-    </li>
+  <li *ngFor="let persona of arrPersonas">
+    {{ persona.nombre }} {{ persona.apellido }}
+  </li>
 </ul>
+<p>Variable normal: {{ dataNormal }}</p>
+<p>Variable Behavior: {{ dataBehavior | async }}</p>
+<p>Variable Subject: {{ dataSubject | async }}</p>
